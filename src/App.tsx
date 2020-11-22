@@ -2,12 +2,10 @@ import React from 'react';
 
 import Routes from './router';
 
-import './styles/global.css';
+import './styles/global.scss';
 
 function App() {
-  return (
-    <Routes />
-  );
+    return <Routes />;
 }
 
 export default App;
