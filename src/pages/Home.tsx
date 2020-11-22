@@ -7,6 +7,7 @@ import { BsPerson } from 'react-icons/bs';
 import { IoMdCalendar } from 'react-icons/io';
 
 import '../styles/pages/home.scss';
+import Card from '../components/Card';
 
 const menuItems: IMenuItem[] = [
     {
@@ -33,7 +34,47 @@ function Home() {
                 <FaBars className="menu-icon" />
             </div>
             <div className="sidenav">{renderMenuItems()}</div>
-            <div className="content"></div>
+            <div className="content">
+                <div className="col-3">
+                    <div className="row">
+                        <Card title="Card Title">
+                            <p>Card Content</p>
+                        </Card>
+                    </div>
+                    <div className="row">
+                        <Card title="Card Title">
+                            <p>Card Content</p>
+                        </Card>
+                    </div>
+                    <div className="row">
+                        <Card title="Card Title">
+                            <p>Card Content</p>
+                        </Card>
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="row">
+                        <Card title="Card Title">
+                            <p>Card Content</p>
+                        </Card>
+                    </div>
+                    <div className="row">
+                        <Card title="Card Title">
+                            <p>Card Content</p>
+                        </Card>
+                    </div>
+                    <div className="row">
+                        <Card title="Card Title">
+                            <p>Card Content</p>
+                        </Card>
+                    </div>
+                </div>
+                <div className="col-6">
+                    <Card title="Card Title">
+                        <p>Card Content</p>
+                    </Card>
+                </div>
+            </div>
         </div>
     );
 }

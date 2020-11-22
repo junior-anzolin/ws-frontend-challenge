@@ -1,4 +1,5 @@
 $heightToolbar: 50px;
+$widthSidenav: 60px;
 $fontSizeIcons: 20px;
 
 .container {
@@ -15,6 +16,7 @@ $fontSizeIcons: 20px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        z-index: 20;
 
         .menu-icon {
             font-size: $fontSizeIcons;
@@ -23,17 +25,19 @@ $fontSizeIcons: 20px;
     }
 
     .sidenav {
-        min-width: 60px;
+        min-width: $widthSidenav;
         height: 100vh;
         background-color: #FFF;
         color: #757575;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.16);
         position: fixed;
-        top: $heightToolbar;
+        top: 0;
         left: 0;
         right: auto;
         bottom: 0;
-
+        padding-top: $heightToolbar;
+        z-index: 10;
+        
         .menu-item {
             width: 100%;
             display: flex;
@@ -47,5 +51,39 @@ $fontSizeIcons: 20px;
         }
     }
 
-    .content {}
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        margin: $heightToolbar 0 0 $widthSidenav;
+        padding: 10px 5px;
+        display: flex;
+        resize: horizontal;
+        flex-wrap: wrap;
+    }
+
+    .col-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 0 5px;
+        height: 100%;
+    }
+
+    .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 5px;
+        height: 100%;
+    }
+
+    .row {
+        height: calc(33% - 3.5px);
+        
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
 }
