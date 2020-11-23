@@ -10,61 +10,85 @@ import { IMenuItem } from '../@types/main.dto';
 
 import '../styles/components/main.scss';
 
-class Main extends React.Component<{}, { menu: JSX.Element[] }> {
+class Main extends React.Component<
+    {},
+    { menu: JSX.Element[]; statusMenu: 'opened' | 'closed' }
+> {
     menuItems: IMenuItem[] = [
         {
-            icon: (active: boolean) => (
-                <AiOutlineSearch className="icon" data-active={active} />
-            ),
+            icon: <AiOutlineSearch className="icon" />,
             route: '/search',
+            label: 'Pesquisar',
         },
         {
-            icon: (active: boolean) => (
-                <BsPerson className="icon" data-active={active} />
-            ),
+            icon: <BsPerson className="icon" />,
             route: '/',
+            label: 'Resumo',
         },
         {
-            icon: (active: boolean) => (
-                <IoMdCalendar className="icon" data-active={active} />
-            ),
+            icon: <IoMdCalendar className="icon" />,
             route: '/calendar',
+            label: 'Calendario',
         },
     ];
 
     constructor(props: { children: any }) {
         super(props);
-        this.state = { menu: this.renderMenuItems() };
+        this.state = {
+            menu: this.renderMenuItems('closed'),
+            statusMenu: 'closed',
+        };
     }
 
     updateManu() {
         setTimeout(() => {
             this.setState({
-                menu: this.renderMenuItems(),
+                menu: this.renderMenuItems(this.state.statusMenu),
             });
-        }, 100);
+        }, 5);
     }
 
-    renderMenuItems() {
+    renderMenuItems(statusMenu: 'opened' | 'closed') {
+        console.log(statusMenu);
         return this.menuItems.map((menuItem, i) => {
             return (
                 <Link to={menuItem.route} key={i}>
                     <button
                         className="menu-item"
                         onClick={() => this.updateManu()}
+                        data-status={statusMenu}
+                        data-active={location.pathname === menuItem.route}
                     >
-                        {menuItem.icon(location.pathname === menuItem.route)}
+                        {menuItem.icon}
+                        {statusMenu === 'opened' && menuItem.label}
                     </button>
                 </Link>
             );
         });
     }
 
+    changeStatusMenu() {
+        if (this.state.statusMenu === 'closed') {
+            this.setState({
+                statusMenu: 'opened',
+                menu: this.renderMenuItems('opened'),
+            });
+        } else {
+            this.setState({
+                statusMenu: 'closed',
+                menu: this.renderMenuItems('closed'),
+            });
+        }
+    }
+
     render() {
         return (
-            <div className="container">
+            <div className="container" data-statusMenu={this.state.statusMenu}>
                 <div className="toolbar">
-                    <button className="menu-burguer">
+                    <button
+                        className="menu-burguer"
+                        onClick={() => this.changeStatusMenu()}
+                    >
                         <FaBars className="menu-icon" />
                     </button>
                 </div>

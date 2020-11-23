@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../styles/pages/home.scss';
 import Card from '../components/Card';
+import InfoPessoal from '../components/InfoPessoal';
 
 function Home() {
     return (
@@ -9,7 +10,7 @@ function Home() {
             <div className="col-3">
                 <div className="row">
                     <Card title="Informações gerais">
-                        <p>Card Content</p>
+                        <InfoPessoal />
                     </Card>
                 </div>
                 <div className="row">
