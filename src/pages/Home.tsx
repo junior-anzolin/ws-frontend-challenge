@@ -2,7 +2,8 @@ import React from 'react';
 
 import '../styles/pages/home.scss';
 import Card from '../components/Card';
-import InfoPessoal from '../components/InfoPessoal';
+import InfoGeral from '../components/InfoGeral';
+import Vendas from '../components/Vendas';
 
 function Home() {
     return (
@@ -10,7 +11,7 @@ function Home() {
             <div className="col-3">
                 <div className="row">
                     <Card title="Informações gerais">
-                        <InfoPessoal />
+                        <InfoGeral />
                     </Card>
                 </div>
                 <div className="row">
@@ -20,7 +21,7 @@ function Home() {
                 </div>
                 <div className="row">
                     <Card title="Vendas">
-                        <p>Card Content</p>
+                        <Vendas />
                     </Card>
                 </div>
             </div>

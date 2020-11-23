@@ -9,6 +9,8 @@ Além disso é o foco trabalhar com ele e React Native daqui para frente.
 #### Tempo de desenvolvimento
 - Iniciei o projeto e configurei o Typescript, Sass e remodelei as pastas. (30min)
 - Comecei o desenvolvimento do componente Home, que para frente será a tela principal. (40min)
+- Desenvolvimento do componente de Informações gerais. (30min)
+- Ajustes no menu e animações (1h 30min)
 
 #### Decisões
 - Para mostrar todo meu conhecimento e até tornar o desafio mais interessante, deixei de utilizar qualquer framework de CSS (Bootstrap por exemplo). O que aumentou o desafio e um pouco do tempo.
@@ -17,4 +19,5 @@ Além disso é o foco trabalhar com ele e React Native daqui para frente.
 
 #### Bibliotecas
 - Node Sass;
-- 
+- Leaflet;
+- React Chartjs 2;

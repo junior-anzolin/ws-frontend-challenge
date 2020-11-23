@@ -10,9 +10,9 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
 import User from './../assets/user.svg';
-import './../styles/components/info-pessoa.scss';
+import './../styles/components/info-geral.scss';
 
-function InfoPessoal() {
+function InfoGeral() {
     return (
         <section className="info-pessoa">
             <div className="row informacoes">
@@ -66,4 +66,4 @@ function InfoPessoal() {
     );
 }
 
-export default InfoPessoal;
+export default InfoGeral;
