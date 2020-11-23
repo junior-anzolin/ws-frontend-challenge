@@ -22,3 +22,8 @@ Além disso é o foco trabalhar com ele e React Native daqui para frente.
 - Node Sass;
 - Leaflet;
 - React Chartjs 2;
+
+# Executando o projeto
+Para executar o projeto na máquina local, é necessario realizar o clone do projeto `git clone https://github.com/junior-anzolin/ws-frontend-challenge.git`.
+Logo em seguida podemos acessar a pasta e rodar o comando para instalar os pacotes `yarn install` ou `npm install`.
+Após a instalação dos pacotes basta executar o comando para iniciar o projeto `yarn start` ou `npm start`.
