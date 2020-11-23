@@ -11,6 +11,7 @@ Além disso é o foco trabalhar com ele e React Native daqui para frente.
 - Comecei o desenvolvimento do componente Home, que para frente será a tela principal. (40min)
 - Desenvolvimento do componente de Informações gerais. (30min)
 - Ajustes no menu e animações (1h 30min)
+- Alguns ajustes levaram mais tempo que o previsto, no total foram 8 horas de desenvolvimento. Infelizmente não conclui todo o desenvolvimento =/
 
 #### Decisões
 - Para mostrar todo meu conhecimento e até tornar o desafio mais interessante, deixei de utilizar qualquer framework de CSS (Bootstrap por exemplo). O que aumentou o desafio e um pouco do tempo.

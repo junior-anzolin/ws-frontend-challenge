@@ -4,6 +4,7 @@ import '../styles/pages/home.scss';
 import Card from '../components/Card';
 import InfoGeral from '../components/InfoGeral';
 import Vendas from '../components/Vendas';
+import Local from '../components/Local';
 
 function Home() {
     return (
@@ -14,11 +15,11 @@ function Home() {
                         <InfoGeral />
                     </Card>
                 </div>
-                <div className="row">
+                {/* <div className="row">
                     <Card title="Oportunidades (7)" showBtnInfo={true}>
                         <p>Card Content</p>
                     </Card>
-                </div>
+                </div> */}
                 <div className="row">
                     <Card title="Vendas">
                         <Vendas />
@@ -28,10 +29,10 @@ function Home() {
             <div className="col-3">
                 <div className="row">
                     <Card title="Local">
-                        <p>Card Content</p>
+                        <Local />
                     </Card>
                 </div>
-                <div className="row">
+                {/* <div className="row">
                     <Card title="Limite de crédito">
                         <p>Card Content</p>
                     </Card>
@@ -40,13 +41,13 @@ function Home() {
                     <Card title="Títulos financeiros">
                         <p>Card Content</p>
                     </Card>
-                </div>
+                </div> */}
             </div>
-            <div className="col-6">
+            {/* <div className="col-6">
                 <Card title="Atividades">
                     <p>Card Content</p>
                 </Card>
-            </div>
+            </div> */}
         </section>
     );
 }

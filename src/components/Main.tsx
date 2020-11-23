@@ -49,14 +49,12 @@ class Main extends React.Component<
     }
 
     renderMenuItems(statusMenu: 'opened' | 'closed') {
-        console.log(statusMenu);
         return this.menuItems.map((menuItem, i) => {
             return (
                 <Link to={menuItem.route} key={i}>
                     <button
                         className="menu-item"
                         onClick={() => this.updateManu()}
-                        data-status={statusMenu}
                         data-active={location.pathname === menuItem.route}
                     >
                         {menuItem.icon}
@@ -83,7 +81,7 @@ class Main extends React.Component<
 
     render() {
         return (
-            <div className="container" data-statusMenu={this.state.statusMenu}>
+            <div className="container" data-statusmenu={this.state.statusMenu}>
                 <div className="toolbar">
                     <button
                         className="menu-burguer"
