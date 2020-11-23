@@ -1,81 +1,51 @@
 import React from 'react';
-import { IMenuItem } from '../@types/home.dto';
-
-import { FaBars } from 'react-icons/fa';
-import { AiOutlineSearch } from 'react-icons/ai';
-import { BsPerson } from 'react-icons/bs';
-import { IoMdCalendar } from 'react-icons/io';
 
 import '../styles/pages/home.scss';
 import Card from '../components/Card';
 
-const menuItems: IMenuItem[] = [
-    {
-        icon: <AiOutlineSearch className="icon" />,
-    },
-    {
-        icon: <BsPerson className="icon" />,
-    },
-    {
-        icon: <IoMdCalendar className="icon" />,
-    },
-];
-
-function renderMenuItems() {
-    return menuItems.map((menuItem) => {
-        return <div className="menu-item">{menuItem.icon}</div>;
-    });
-}
-
 function Home() {
     return (
-        <div className="container">
-            <div className="toolbar">
-                <FaBars className="menu-icon" />
-            </div>
-            <div className="sidenav">{renderMenuItems()}</div>
-            <div className="content">
-                <div className="col-3">
-                    <div className="row">
-                        <Card title="Card Title">
-                            <p>Card Content</p>
-                        </Card>
-                    </div>
-                    <div className="row">
-                        <Card title="Card Title">
-                            <p>Card Content</p>
-                        </Card>
-                    </div>
-                    <div className="row">
-                        <Card title="Card Title">
-                            <p>Card Content</p>
-                        </Card>
-                    </div>
+        <section className="home">
+            <div className="col-3">
+                <div className="row">
+                    <Card title="Informações gerais">
+                        <p>Card Content</p>
+                    </Card>
                 </div>
-                <div className="col-3">
-                    <div className="row">
-                        <Card title="Card Title">
-                            <p>Card Content</p>
-                        </Card>
-                    </div>
-                    <div className="row">
-                        <Card title="Card Title">
-                            <p>Card Content</p>
-                        </Card>
-                    </div>
-                    <div className="row">
-                        <Card title="Card Title">
-                            <p>Card Content</p>
-                        </Card>
-                    </div>
+                <div className="row">
+                    <Card title="Oportunidades (7)" showBtnInfo={true}>
+                        <p>Card Content</p>
+                    </Card>
                 </div>
-                <div className="col-6">
-                    <Card title="Card Title">
+                <div className="row">
+                    <Card title="Vendas">
                         <p>Card Content</p>
                     </Card>
                 </div>
             </div>
-        </div>
+            <div className="col-3">
+                <div className="row">
+                    <Card title="Local">
+                        <p>Card Content</p>
+                    </Card>
+                </div>
+                <div className="row">
+                    <Card title="Limite de crédito">
+                        <p>Card Content</p>
+                    </Card>
+                </div>
+                <div className="row">
+                    <Card title="Títulos financeiros">
+                        <p>Card Content</p>
+                    </Card>
+                </div>
+            </div>
+            <div className="col-6">
+                <Card title="Atividades">
+                    <p>Card Content</p>
+                </Card>
+            </div>
+        </section>
     );
 }
 

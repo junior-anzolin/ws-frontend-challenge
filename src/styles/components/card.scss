@@ -7,10 +7,12 @@
     height: 100%;
 
     .card-header {
-        h3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5 {
             color: #313131;
         }
     }
-
-    .card-content {}
 }

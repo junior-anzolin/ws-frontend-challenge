@@ -1,0 +1,102 @@
+$heightToolbar: 50px;
+$widthSidenav: 60px;
+$fontSizeIcons: 20px;
+
+.container {
+    .toolbar {
+        background-color: #2676d2;
+        color: #FFF;
+        height: $heightToolbar;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 20;
+
+        .menu-burguer {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            font-size: $fontSizeIcons;
+            margin: 0 20px;
+
+            &:hover {
+                color: #ddd;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .sidenav {
+        width: $widthSidenav;
+        height: 100vh;
+        background-color: #FFF;
+        color: #757575;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.16);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        padding-top: $heightToolbar;
+        z-index: 10;
+
+        .menu-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            margin: 5px auto;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+
+            .icon {
+                font-size: $fontSizeIcons;
+            }
+
+            &:hover {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            [data-active="true"] {
+                color: #2676d2 !important;
+            }
+        }
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        margin: $heightToolbar 0 0 $widthSidenav;
+        padding: 10px 5px;
+        display: flex;
+        resize: horizontal;
+        flex-wrap: wrap;
+    }
+}
