@@ -1,10 +1,12 @@
 import React from 'react';
 
 import '../styles/pages/home.scss';
+
 import Card from '../components/Card';
 import InfoGeral from '../components/InfoGeral';
 import Vendas from '../components/Vendas';
 import Local from '../components/Local';
+import Atividades from '../components/Atividades';
 
 function Home() {
     return (
@@ -15,12 +17,12 @@ function Home() {
                         <InfoGeral />
                     </Card>
                 </div>
-                {/* <div className="row">
+                {/* <div className="row mt-10">
                     <Card title="Oportunidades (7)" showBtnInfo={true}>
                         <p>Card Content</p>
                     </Card>
                 </div> */}
-                <div className="row">
+                <div className="row mt-10">
                     <Card title="Vendas">
                         <Vendas />
                     </Card>
@@ -32,22 +34,22 @@ function Home() {
                         <Local />
                     </Card>
                 </div>
-                {/* <div className="row">
+                {/* <div className="row mt-10">
                     <Card title="Limite de crédito">
                         <p>Card Content</p>
                     </Card>
                 </div>
-                <div className="row">
+                <div className="row mt-10">
                     <Card title="Títulos financeiros">
                         <p>Card Content</p>
                     </Card>
                 </div> */}
             </div>
-            {/* <div className="col-6">
+            <div className="col-6">
                 <Card title="Atividades">
-                    <p>Card Content</p>
+                    <Atividades />
                 </Card>
-            </div> */}
+            </div>
         </section>
     );
 }

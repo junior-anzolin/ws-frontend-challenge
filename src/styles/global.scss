@@ -15,3 +15,53 @@ button,
 textarea {
     font: 600 18px Nunito, sans-serif;
 }
+
+.col {
+    position: relative;
+    width: 100%;
+}
+
+.col-auto {
+    width: auto !important;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 5px;
+    height: 100%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 5px;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    position: relative;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+
+.my-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
