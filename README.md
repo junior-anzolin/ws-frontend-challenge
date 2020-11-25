@@ -10,13 +10,15 @@ Além disso é o foco trabalhar com ele e React Native daqui para frente.
 - Iniciei o projeto e configurei o Typescript, Sass e remodelei as pastas. (30min)
 - Comecei o desenvolvimento do componente Home, que para frente será a tela principal. (40min)
 - Desenvolvimento do componente de Informações gerais. (30min)
-- Ajustes no menu e animações (1h 30min)
-- Alguns ajustes levaram mais tempo que o previsto, no total foram 8 horas de desenvolvimento. Infelizmente não conclui todo o desenvolvimento =/
+- Ajustes no menu e animações. (1h 30min)
+- Criação do componente de atividades com pesquisa e filtros. (4h)
+- No total foram necessárioas 12 horas de desenvolvimento para chegar na etapa atual.
 
 #### Decisões
 - Para mostrar todo meu conhecimento e até tornar o desafio mais interessante, deixei de utilizar qualquer framework de CSS (Bootstrap por exemplo). O que aumentou o desafio e um pouco do tempo.
 - Optei por utilizar o SASS para manter uma folha de estilos mais organizada e para aumentar a velocidade de escrita.
 - Criei um menu 100% dinâmico e coloquei apenas 3 opções, como o foco é na tela principal, não achei necessário colocar muitos menus.
+- Decidi deixar as informações estaticas dentro dos componentes, para o foco maior estar no layout, poderia estar utilizando outras maneiras para fazer a captura dessas informações, mas não achei relevante.
 
 #### Bibliotecas
 - Node Sass;
