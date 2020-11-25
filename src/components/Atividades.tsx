@@ -190,7 +190,7 @@ class Atividades extends React.Component<
             if (value.items.length) {
                 value.items.map((item, j) => {
                     items.push(
-                        <div className="row" key={`item${j}`}>
+                        <div className="row" key={`item-${j}`}>
                             <div className="col-auto icon">{item.icon}</div>
                             <div className="col">
                                 <div className="row title-atividade">
@@ -204,12 +204,8 @@ class Atividades extends React.Component<
                 });
 
                 result.push(
-                    <div className="row">
-                        <div
-                            className="atividade"
-                            data-color={value.color}
-                            key={`categoria${i}`}
-                        >
+                    <div className="row" key={`categoria-${i}`}>
+                        <div className="atividade" data-color={value.color}>
                             <div className="row title-type">
                                 {value.titleType}
                             </div>
@@ -240,9 +236,9 @@ class Atividades extends React.Component<
             filtros.push(
                 <div
                     className="col-auto row justify-content-center align-items-center filter"
-                    key={`filtro${key}`}
                     data-active={activePosition === key}
                     onClick={() => this.selectFilter(key)}
+                    key={`filtro-${key}`}
                 >
                     <div
                         className="count"
@@ -258,7 +254,7 @@ class Atividades extends React.Component<
         filtros.unshift(
             <div
                 className="col-auto row justify-content-center align-items-center filter"
-                key="filtro0"
+                key="filtro-0"
                 data-active={activePosition === 0}
                 onClick={() => this.selectFilter(0)}
             >

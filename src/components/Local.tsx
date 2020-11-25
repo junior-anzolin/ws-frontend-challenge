@@ -1,18 +1,22 @@
 import React from 'react';
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 
+import './../styles/components/local.scss';
 import 'leaflet/dist/leaflet.css';
 import { Icon, LatLngTuple } from 'leaflet';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 function Local() {
     const position: LatLngTuple = [-24.9569075, -53.4658602];
     return (
         <>
-            <div className="row" style={{ height: '250px' }}>
+            <div className="map">
                 <MapContainer
                     center={position}
                     zoom={13}
-                    style={{ height: '100%' }}
+                    style={{
+                        height: '100%',
+                    }}
                 >
                     <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                     <Marker
@@ -26,6 +30,17 @@ function Local() {
                         }
                     />
                 </MapContainer>
+            </div>
+            <div className="row descricao-maps align-items-center">
+                <div className="col-auto icon">
+                    <FaMapMarkerAlt />
+                </div>
+                <div className="col">
+                    <div className="row endereco">
+                        Rua Presidente Bernardes, 2009
+                    </div>
+                    <div className="row descricao">Trabalho</div>
+                </div>
             </div>
         </>
     );

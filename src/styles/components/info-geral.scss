@@ -4,6 +4,8 @@
     .informacoes {
         display: flex;
         align-items: center;
+        margin-bottom: 50px;
+        margin-top: 10px;
 
         .img-pessoa {
             width: 100px;
@@ -33,6 +35,7 @@
             color: #424242;
             font-size: 14px;
             width: 55px;
+            font-weight: 700;
         }        
     }
 
@@ -58,6 +61,7 @@
 
     .redes {
         justify-content: flex-end;
+        margin-top: 20px;
 
         .item {
             font-size: 20px;
@@ -68,19 +72,6 @@
             &:hover {
                 color: #9e9e9e;
             }
-        }
-    }
-
-    .row {
-        width: 100%;
-        display: flex;
-
-        .col {
-            width: 100%;
-        }
-
-        .col-auto {
-            width: auto;
         }
     }
 }
