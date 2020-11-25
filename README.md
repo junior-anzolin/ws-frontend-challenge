@@ -12,7 +12,7 @@ Além disso é o foco trabalhar com ele e React Native daqui para frente.
 - Desenvolvimento do componente de Informações gerais. (30min)
 - Ajustes no menu e animações. (1h 30min)
 - Criação do componente de atividades com pesquisa e filtros. (4h)
-- No total foram necessárioas 12 horas de desenvolvimento para chegar na etapa atual.
+- No total foram necessárias 12 horas de desenvolvimento para chegar na etapa atual.
 
 #### Decisões
 - Para mostrar todo meu conhecimento e até tornar o desafio mais interessante, deixei de utilizar qualquer framework de CSS (Bootstrap por exemplo). O que aumentou o desafio e um pouco do tempo.
